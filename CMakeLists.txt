@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 2.8)
+set( BIN heuristicworm )
+SET(CMAKE_BUILD_TYPE "Release")
+PROJECT( ${BIN} )
+set( SOURCE_ROOT ./src )
+aux_source_directory( ${SOURCE_ROOT} SOURCES )
+set( INSTALL_PATH ~/HeuristicWorm/ )
+set( CMAKE_CXX_FLAGS "-O0 -Wall -pedantic -std=c++0x" )
+add_executable( heuristicworm ${SOURCES} )
+install( TARGETS ${BIN} DESTINATION ${INSTALL_PATH} )
+
